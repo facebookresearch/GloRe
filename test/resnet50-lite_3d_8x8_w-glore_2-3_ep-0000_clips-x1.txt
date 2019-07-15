@@ -1,0 +1,63 @@
+2019-07-08 02:01:39 INFO: Start evaluation with args:
+{
+    "batch_size": 32,
+    "clip_length": 8,
+    "dataset": "Kinetics",
+    "debug_mode": true,
+    "frame_interval": 8,
+    "gpus": "0,1,2,3,4,5,6,7",
+    "load_epoch": 0,
+    "log_file": "./eval-clips-x1.log",
+    "model_prefix": ".././exps/models/resnet50-lite_3d_8x8_w-glore_2-3",
+    "model_root": "../",
+    "model_subpath": "./exps/models/resnet50-lite_3d_8x8_w-glore_2-3_ep-0000.pth",
+    "network": "RESNET50_3D_GCN_X5"
+}
+2019-07-08 02:01:40 DEBUG: Target dataset: 'KINETICS', configs: {'num_classes': 400}
+2019-07-08 02:01:40 WARNING: Initializer:: 'GloRe_Unit' is uninitialized.
+2019-07-08 02:01:40 WARNING: Initializer:: 'GloRe_Unit' is uninitialized.
+2019-07-08 02:01:40 WARNING: Initializer:: 'GloRe_Unit' is uninitialized.
+2019-07-08 02:01:40 WARNING: Initializer:: 'GloRe_Unit' is uninitialized.
+2019-07-08 02:01:40 WARNING: Initializer:: 'GloRe_Unit' is uninitialized.
+2019-07-08 02:01:40 WARNING: Initializer:: 'Dropout' is uninitialized.
+2019-07-08 02:01:40 INFO: Network:: symbol initialized, use random inilization!
+2019-07-08 02:01:40 INFO: Network:: change params of the following layer be zeros: ['conv3.B01_extra.blocker.weight', 'conv3.B03_extra.blocker.weight', 'conv4.B01_extra.blocker.weight', 'conv4.B03_extra.blocker.weight', 'conv4.B05_extra.blocker.weight']
+2019-07-08 02:01:40 DEBUG: loading network configs of: RESNET50_3D_GCN_X5
+2019-07-08 02:01:40 INFO: Preprocessing:: using MXNet default mean & std.
+2019-07-08 02:01:40 INFO: data:: {'mean': [0.48627450980392156, 0.4588235294117647, 0.40784313725490196], 'std': [0.23482446870963955, 0.23482446870963955, 0.23482446870963955]}
+2019-07-08 02:01:43 INFO: Only model state resumed from: `.././exps/models/resnet50-lite_3d_8x8_w-glore_2-3_ep-0000.pth'
+2019-07-08 02:02:25 INFO: - slen: 256, crop size: 224 x 224. 
+2019-07-08 02:02:25 INFO: VideoIter:: found 19269 videos in `./.cache/kinetics_val_avi.txt'
+2019-07-08 02:02:25 INFO: VideoIter:: iterator initialized (phase: 'test', num: 19269)
+2019-07-08 02:03:41 INFO: 1.0: 0.0% 	| Batch [0,0]    	Avg: loss-ce = 0.78589, top1 = 0.81250, top5 = 0.93750
+2019-07-08 02:04:30 INFO: 1.0: 16.6% 	| Batch [0,100]    	Avg: loss-ce = 1.47259, top1 = 0.68100, top5 = 0.87376
+2019-07-08 02:05:29 INFO: 1.0: 33.2% 	| Batch [0,200]    	Avg: loss-ce = 1.46186, top1 = 0.67942, top5 = 0.87407
+2019-07-08 02:06:27 INFO: 1.0: 49.8% 	| Batch [0,300]    	Avg: loss-ce = 1.47605, top1 = 0.67712, top5 = 0.87147
+2019-07-08 02:07:26 INFO: 1.0: 66.3% 	| Batch [0,400]    	Avg: loss-ce = 1.45392, top1 = 0.68041, top5 = 0.87329
+2019-07-08 02:08:23 INFO: 1.0: 82.9% 	| Batch [0,500]    	Avg: loss-ce = 1.46262, top1 = 0.67771, top5 = 0.87263
+2019-07-08 02:08:53 INFO: 1.0: 99.5% 	| Batch [0,600]    	Avg: loss-ce = 1.45295, top1 = 0.67980, top5 = 0.87354
+2019-07-08 02:08:54 INFO: Evaluation Finished!
+2019-07-08 02:08:56 INFO: Total number of videos: 19269
+2019-07-08 02:08:56 INFO: Total time cost: 250.4 sec
+2019-07-08 02:08:56 INFO: Speed: 77.0479 samples/sec
+2019-07-08 02:08:56 INFO: Accuracy:
+2019-07-08 02:08:56 INFO: [
+    [
+        [
+            "loss-ce",
+            1.4524153621017708
+        ]
+    ],
+    [
+        [
+            "top1",
+            0.6798484612590171
+        ]
+    ],
+    [
+        [
+            "top5",
+            0.8735793243032851
+        ]
+    ]
+]
